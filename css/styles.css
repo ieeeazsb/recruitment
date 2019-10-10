@@ -1,0 +1,326 @@
+@import "framework.css";
+
+/* styling the header */
+header#main-header {
+  height: 100vh;
+  text-align: center;
+}
+
+header .btn-header {
+  font-size: 3vw;
+}
+
+@media (max-width: 600px) {
+  header .btn-header {
+    font-size: 5.5vw;
+  }
+}
+
+.event-name {
+  display: inline-block;
+  margin-top: 13px;
+  margin-bottom: 25px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+/* style the header */
+.header-caption {
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.side-caption {
+  margin-bottom: 40px;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #000;
+}
+
+header .lang-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background: #ffff;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* style the form card */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px 3px #7b7b7b;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.anime-form {
+  animation: layout 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes layout {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+
+  50% {
+    width: 30px;
+    height: 700px;
+  }
+
+  100% {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* style the form */
+#regForm {
+  width: 100%;
+}
+
+.card .form-fields {
+  background-color: #1f2428;
+  padding: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  animation: opacity 1s ease-in 2.5s forwards;
+}
+
+/* style the heading of the form */
+.card .h1 {
+  background-color: #454c5e;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+/* style the labels */
+.card .field {
+  margin-bottom: 20px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.card .field .radio-block {
+  display: flex;
+}
+
+.card .field .radio-block input {
+  width: 10%;
+  margin-bottom: 10px;
+}
+
+.card label {
+  margin-bottom: 10px;
+}
+
+#terms-check {
+  display: inline-block;
+  width: 10%;
+}
+
+/* style the inputs */
+.card input,
+.card select,
+.card textarea {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid #454c5e;
+  outline: 0;
+}
+
+.card input[type="submit"] {
+  width: 50%;
+}
+
+/* validation */
+input.valid,
+select.valid,
+textarea.valid {
+  border: 3px solid green;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 3px solid #bd2424;
+}
+
+/* style the validation message */
+.validate-message {
+  color: #bd2424;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-left: 14px;
+}
+
+.card input:focus,
+.card select:focus,
+.card textarea:focus {
+  border: 3px solid #093281;
+}
+
+/* style the submit button */
+.card input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* modal style */
+/* The Modal (background) */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  color: #000;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body img {
+  max-width: 32%;
+  height: auto;
+}
+
+#tAc .modal-content {
+  height: 70%;
+  overflow: auto;
+  display: block;
+}
+
+#tAc .modal-content .modal-body {
+  display: block;
+  text-align: left;
+  padding-top: 50px;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* hide the question and show it on select */
+.question,
+.other,
+.eng-dept,
+.year,
+.social,
+.School {
+  display: none;
+}
+
+/* style the location page */
+
+#main-header.loc-header {
+  height: auto;
+}
+
+.location-card {
+  text-align: center;
+  box-shadow: 1px 1px 14px 2px #060611;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(18, 18, 88, 0.7);
+}
+
+.location-card .location-desc {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.location-card img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.location-card .location-desc a {
+  color: #fff;
+  border-bottom: 1px dotted;
+}

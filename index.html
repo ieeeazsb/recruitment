@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registeration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/logo.png"/>
+  </head>
+
+  <body>
+    <!-- the header of the app -->
+    <header id="main-header" class="reg-header text-center">
+      <!-- the logo -->
+      <a href="/" class="logo-link"><img class="logo-img" src="assets/logo.png" alt="IEEE logo"/></a>
+      
+      <!--heading-->
+      <h1> IEEE'20 Members Recruitment </h1>
+
+      <!-- button to scroll down to the form -->
+      <button class="btn btn-header" disabled>
+        <img src="assets/loader.gif" alt="loading ..." />
+      </button>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <!-- the header of the main content -->
+      <header class="reg-header text-center">
+        <!-- the instructions -->
+        <p class="side-caption">
+          Please fill in some information and make sure to fill all fields with
+          <span class="red">* </span>sign.
+        </p>
+      </header>
+      <!-- the form section -->
+      <div class="container contain">
+        <section class="card">
+          <form id="regForm" novalidate>
+            <legend class="h1 text-center card-head">Registeration Form</legend>
+              <section class="form-fields">
+                <!-- TODO: add the haif class if the form become long -->
+                <div class="field half">
+                  <label for="name">Full Name <span class="red"> * </span></label
+                  ><input
+                    id="name"
+                    type="text"
+                    name="Name"
+                    placeholder="e.g: Mohamed"
+                    required
+                  />
+                </div>
+  
+                
+                <div class="field half">
+                  <label for="email"
+                  >Your Email Address<span class="red"> * </span></label
+                  >
+                  <input
+                  id="email"
+                  type="email"
+                  name="Email Address"
+                  placeholder="e.g: example@example.com"
+                  required
+                  />
+                </div>
+  
+                <!-- fix the float problem -->
+                <div class="clearfix"></div>
+  
+                <div class="field half">
+                  <label for="phone"
+                    >Your Phone Number<span class="red"> * </span></label
+                  >
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="Mobile number"
+                    placeholder="e.g: 01003400000"
+                    required
+                    />
+                  </div>
+  
+                  
+                  <!-- facebook link -->
+                  <div class="field half">
+                    <label for="facebook"
+                    >Your Facebook account URL<span class="red"> * </span></label
+                    >
+                    <input
+                    id="facebook"
+                    type="url"
+                    name="Facebook URL"
+                    placeholder="e.g: https://m.facebook.com/username"
+                    required
+                    />
+                  </div>
+                  <div class="clearfix"></div>
+  
+                  <!-- university -->
+                <div class="field">
+                  <label for="university">University<span class="red"> * </span> </label>
+                  <select name="University" id="university" required>
+                      <option value="" disabled selected>Select your university</option>
+                      <option value="Azhar">Al-azhar</option>
+                      <option value="cairo">Cairo</option>
+                      <option value="Ain shams">Ain shams</option>
+                      <option value="Helwan">Helwan</option>
+                      <option value="Helwan-Matarya">Helwan-Matarya Branch</option>
+                      <option value="Shoubra">Shoubra</option>
+                      <option value="ECU">ECU</option>
+                      <option value="October">October</option>
+                      <option value="GUC">GUC</option>
+                      <option value="AUC">AUC</option>
+                      <option value="MSA">MSA</option>
+                      <option value="Future">Future</option>
+                      <option value="BUE">BUE</option>
+                      <option value="Badr">Badr</option>
+                      <option value="AAST">AAST</option>
+                      <option value="MUST">MUST</option>
+                      <option value="Nile">Nile</option>
+                      <option value="CIC">CIC</option>
+                      <option value="High institute of technology">High institute of technology</option>
+                      <option value="other">Other</option>
+                  </select>
+                  
+                </div>
+   
+                <div class="field other">
+                  <label>Other:</label>
+                  <input type="text" placeholder="Enter your university" required>
+                </div>
+  
+                <div class="field">
+                  <label for="faculty">Faculty<span class="red"> * </span></label>
+                  <select name="faculty" id="faculty" required>
+                      <option value="" disabled selected>Select your faculty</option>
+                      <option value="Engineering">Engineering</option>
+                      <option value="law">Law</option>
+                      <option value="medicine">Medicine</option>
+                      <option value="Economics and political science">Economics and political science</option>
+                      <option value="applied arts">Applied arts</option>
+                      <option value="pharmacyeuticals">Pharmacy</option>
+                      <option value="Linguistics">Linguistics</option>
+                      <option value="Commerce">Commerce</option>
+                      <option value="Education">Education</option>
+                      <option value="Computer sciences">Computer science</option>
+                      <option value="science">Science</option>
+                      <option value="Fine arts">Fine arts</option>
+                      <option value="Mass communication">Mass communication</option>
+                      <option value="Arts">Arts</option>
+                      <option value="other">Other</option>
+                  </select>
+                </div>
+  
+                <div class="field other">
+                  <label>Other:</label>
+                  <input type="text" placeholder="Enter your faculty" required>
+                </div>
+  
+                <div class="field eng-dept">
+                    <label for="department">Department<span class="red"> * </span></label>
+                    <select name="Department" id="department" required>
+                        <option value="" disabled selected>Select your department</option>
+                        <option value="Not yet">Not yet</option>
+                        <option value="Architectural">Architectural</option>
+                        <option value="Chemical">Chemical</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Communication">Communication</option>
+                        <option value="Electrical Power">Electrical Power</option>
+                        <option value="Electrical (general)">Electrical (general)</option>
+                        <option value="Mechanical (general)">Mechanical (general)</option>
+                        <option value="Mechanical Power">Mechanical Power</option>
+                        <option value="Petroleum">Petroleum</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Mechatronics">Mechatronics</option>
+                        <option value="Production">Production</option>
+                        <option value="Aerospace">Aerospace</option>
+                        <option value="industrial">Industrial</option>
+                    </select>
+  
+                    
+                </div>
+  
+                <div class="field year">
+                  <label for="year">Year<span class="red"> * </span></label>
+                  <select name="Academic year" id="year" required>
+                      <option value="" disabled selected>Select a year</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="know-ieee"
+                    >What do you know about IEEE ?<span class="red"
+                      > *
+                    </span></label
+                  >
+                  <textarea
+                    id="know-ieee"
+                    name="know-ieee"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+  
+                <div class="field">
+                  <label for="committee"
+                    >Choose the committee you want to join (1st preference)<span class="red"
+                      >*
+                    </span></label
+                  >
+                  <select id="committee" name="committee 1st" required>
+                    <option value="" disabled selected>Select a committee</option>
+                    <option value="HR">Human Resources Member</option>
+                    <option value="PR">Public Relations Member</option>
+                    <option value="Marketing">Marketing Member</option>
+                    <option value="Media">Media Member</option>
+                    <option value="DCR">DCR Member</option>
+                    <option value="Security">Security Member</option>
+                    <option value="Robotics">Robotics Member</option>
+                    <option value="Embedded">Embedded System Member</option>
+                    <option value="Web">Web Member</option>
+                    <option value="Network">Network Member</option>
+                    <option value="Programming">Programming Member</option>
+                    <option value="Mobile App">Mobile App Member</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="join-reason"
+                    >Why did you choose this committee?<span class="red"
+                      > *
+                    </span></label
+                  >
+                  <textarea
+                    id="join-reason"
+                    name="join-reason"
+                    cols="30"
+                    rows="10"
+                    placeholder="e.g: To learn"
+                    required
+                  ></textarea>
+                </div>
+
+
+                <div class="field">
+                  <label for="experience"
+                    >What are your experiences in this field ?<span class="red"
+                      > *
+                    </span></label
+                  >
+                  <textarea
+                    id="experience"
+                    name="experience"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+                
+                <div class="field">
+                  <label for="committee"
+                    >Choose the committee you want to join (2nd preference)<span class="red"
+                      >*
+                    </span></label
+                  >
+                  <select id="committee2" name="committee 2nd" required>
+                    <option value="" disabled selected>Select a committee</option>
+                    <option value="HR">Human Resources Member</option>
+                    <option value="PR">Public Relations Member</option>
+                    <option value="Marketing">Marketing Member</option>
+                    <option value="Media">Media Member</option>
+                    <option value="DCR">DCR Member</option>
+                    <option value="Security">Security Member</option>
+                    <option value="Robotics">Robotics Member</option>
+                    <option value="Embedded">Embedded System Member</option>
+                    <option value="Web">Web Member</option>
+                    <option value="Network">Network Member</option>
+                    <option value="Programming">Programming Member</option>
+                    <option value="Mobile App">Mobile App Member</option>
+                  </select>
+                </div>
+  
+                <div class="field">
+                  <label for="how">How did you know us? <span class="red"> *</span></label>
+  
+                  <select name="How Know" id="how" required>
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Social media">Social media</option>
+                    <option value="friend">Friend</option>
+                    <option value="university">University</option>
+                  </select>
+                </div>
+
+              <div class="field">
+                <label for="comments">Any comments?</label>
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="leave a comment"></textarea>
+              </div>
+                
+              <label for="terms-check">
+                <input type="checkbox" id="terms-check">
+                I agree to <a href="#" id="terms-click">Terms & conditions</a>
+              </label>
+                
+              <input type="submit" class="btn" value="Register" />
+            </section>
+          </form>
+        </section>
+      </div>
+      <!-- The Modal-->
+      <div class="modal" id="val-modal">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="assets/loader.gif" alt="loading ..." />
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- terms & conditions-->
+    <div class="modal" id="tAc">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <h1>Terms and Conditions</h1>
+
+          <p>Please read these Terms and Conditions carefully before using the Service operated by IEEE-Azhar.</p>
+
+          <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+
+          <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+
+
+          <h2>Links To Other Web Sites</h2>
+
+          <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by IEEE-Azhar.</p>
+
+          <p>IEEE-Azhar has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that IEEE-Azhar shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+
+          <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</p>
+
+          <h2>Governing Law</h2>
+
+          <p>These Terms shall be governed and construed in accordance with the laws of Egypt, without regard to its conflict of law provisions.</p>
+
+          <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- the footer of the app -->
+    <footer class="text-center">
+
+    </footer>
+
+    <script src="js/main.js" defer="defer"></script>
+  </body>
+</html>

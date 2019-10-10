@@ -129,7 +129,7 @@ regForm.addEventListener("submit", function(e) {
     modalContent.querySelector("img").style.display = "block";
 
     // send data to the api
-    fetch("https://warm-garden-27894.herokuapp.com/register", {
+    fetch("http://localhost:4000/register", {
       method: "post",
       headers: {
         Accept: "application/json, text/plain, */*",
